@@ -1,0 +1,22 @@
+operations:
+  view:
+    - type: web
+      impl: index.html
+actions: actions
+web: web-src
+runtimeManifest:
+  packages:
+    dx-excshell-1:
+      license: Apache-2.0
+      actions:
+        stock-search:
+          function: actions/stock-search/index.js
+          web: 'yes'
+          runtime: 'nodejs:14'
+          inputs:
+            LOG_LEVEL: debug
+            STOCK_API_KEY: $STOCK_API_KEY
+            STOCK_X_PRODUCT: $STOCK_X_PRODUCT
+          annotations:
+            require-adobe-auth: false
+            final: true

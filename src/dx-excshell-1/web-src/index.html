@@ -1,0 +1,60 @@
+<!-- <license header> -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="spectrum spectrum--lightest spectrum--medium">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#333333">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>StockSearch</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uma8ayv.css" />
+  <link rel="stylesheet" type="text/css" href="./src/index.css">
+  <script src="./src/index.js" async />
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <main class="spectrum-Typography">
+    <h1 class="spectrum-Heading spectrum-Heading--sizeM">Project Firefly demo with Adobe Stock API</h1>
+    <p class="spectrum-Body spectrum-Body--sizeM">Enter key words then hit submit to search through Adobe Stock Images.</p>
+    <p class="spectrum-Body spectrum-Body--sizeM">The request goes through an Adobe I/O Runtime action to fetch the resources via the Adobe Stock API. The UI is built with Spectrum and hosted on the Adobe CDN.</p>
+    <p class="spectrum-Body spectrum-Body--sizeM">Source: <a href="https://github.com/AdobeDocs/adobeio-samples-stock-search" class="spectrum-Link spectrum-Link--quiet">https://github.com/AdobeDocs/adobeio-samples-stock-search</a></p>
+
+    <form id="search" hidden>
+      <div class="spectrum-Textfield">
+        <input autocomplete="off" type="text" name="words" aria-label="Query" placeholder="Search Adobe Stock images" class="spectrum-Textfield-input">
+      </div>
+      <button type="submit" class="spectrum-ActionButton spectrum-ActionButton--sizeM">
+        <span class="spectrum-ActionButton-label">Search</span>
+      </button>
+    </form>
+
+    <div id="loading" hidden class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--large">
+      <div class="spectrum-ProgressCircle-track"></div>
+      <div class="spectrum-ProgressCircle-fills">
+        <div class="spectrum-ProgressCircle-fillMask1">
+          <div class="spectrum-ProgressCircle-fillSubMask1">
+            <div class="spectrum-ProgressCircle-fill"></div>
+          </div>
+        </div>
+        <div class="spectrum-ProgressCircle-fillMask2">
+          <div class="spectrum-ProgressCircle-fillSubMask2">
+            <div class="spectrum-ProgressCircle-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="results" hidden></section>
+
+    <section id="signIn" hidden>
+      <p class="spectrum-Body spectrum-Body--sizeM">Please sign in to use the demo app.</p>
+
+      <button id="signInButton" class="spectrum-Button spectrum-Button--cta spectrum-Button--sizeM">
+        <span class="spectrum-Button-label">Sign In</span>
+      </button>
+    </section>
+  </main>
+</body>
+</html>
