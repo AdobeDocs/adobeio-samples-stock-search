@@ -1,4 +1,4 @@
-# Project Firefly demo with Adobe Stock API
+# Adobe Developer App Builder demo with Adobe Stock API
 
 Demo at https://www.adobe.io/project-firefly/docs/resources/sample_apps/demo/
 
